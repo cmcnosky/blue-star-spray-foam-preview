@@ -5,8 +5,22 @@
   const updateThemeLabel=()=>{if(theme)theme.setAttribute('aria-label',root.dataset.theme==='light'?'Use dim colors':'Use light colors')};
   updateThemeLabel();
   theme?.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('bs-main-theme',root.dataset.theme)}catch{}updateThemeLabel()});
-  const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav');
+  const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav'),brand=document.querySelector('.site-header .brand');
   function closeMenu(){if(!menu||!nav)return;menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');nav.classList.remove('open')}
+  const desktopNav=window.matchMedia('(min-width: 961px)');
+  function resetMenuAtBreakpoint(event){
+    if(!menu||!nav)return;
+    const active=document.activeElement;
+    const menuWillHide=event.matches&&active===menu;
+    const mobileProjectWillHide=event.matches&&active instanceof Element&&active.matches('.mobile-project');
+    const navWillHide=!event.matches&&active instanceof Node&&nav.contains(active);
+    closeMenu();
+    // Move focus only when the newly selected layout hides its current control.
+    if(menuWillHide||mobileProjectWillHide)brand?.focus();
+    else if(navWillHide)menu.focus();
+  }
+  if(desktopNav.addEventListener)desktopNav.addEventListener('change',resetMenuAtBreakpoint);
+  else desktopNav.addListener(resetMenuAtBreakpoint);
   menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('open',open);if(open)nav.querySelector('a')?.focus()});
   nav?.addEventListener('click',event=>{if(event.target instanceof Element && event.target.closest('a'))closeMenu()});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu?.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus()}});
