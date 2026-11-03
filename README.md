@@ -2,6 +2,10 @@
 
 A public design preview for Blue Star, built around a clear customer-to-contractor handoff: describe the building, share existing plans or photos, and let Josh recommend the scope.
 
+## Main version
+
+The approved architectural design is the main GitHub Pages site at https://cmcnosky.github.io/blue-star-spray-foam-preview/. Previously shared `/concept/` page URLs redirect to the corresponding main pages. Generate both the current pages and these aliases with the root `build.py`; do not maintain a second concept build. The pre-promotion site is retained in Git history at commit `8d4d01f` and in the local Historical Source archive.
+
 ## Pages
 
 - Home: project routes, applications, surface-area guidance, next steps and answers.
@@ -26,7 +30,7 @@ This preview adds no marketing analytics or ad trackers. It stores a local light
 
 ## Content and image provenance
 
-Published contact information, service categories and gallery source images came from [Blue Star's current website](https://www.bluestarsprayfoam.com/), reviewed November 2, 2026. The company has not supplied independently verified project names, locations, performance results, insurance, qualifications or capacity facts for this preview. Images are described as images from the existing gallery, without those additional claims.
+Published contact information, service categories and gallery source images came from [Blue Star's current website](https://www.bluestarsprayfoam.com/), reviewed November 2 and rechecked November 3, 2026. The company has not supplied independently verified project names, locations, performance results, insurance, qualifications or capacity facts for this preview. Images are described as images from the existing gallery, without those additional claims.
 
 The segmented-star logo and Blue Star / Spray Foam / Insulation wording retain the identity approved during this project. The metal-building photograph is resized and compressed for web delivery. The other photographs are existing gallery assets.
 

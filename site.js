@@ -4,10 +4,10 @@
   const theme=document.querySelector('.theme-toggle');
   const updateThemeLabel=()=>{if(theme)theme.setAttribute('aria-label',root.dataset.theme==='light'?'Use dim colors':'Use light colors')};
   updateThemeLabel();
-  theme?.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('bs-preview-theme',root.dataset.theme)}catch{}updateThemeLabel()});
+  theme?.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('bs-main-theme',root.dataset.theme)}catch{}updateThemeLabel()});
   const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav');
   function closeMenu(){if(!menu||!nav)return;menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');nav.classList.remove('open')}
-  menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('open',open)});
+  menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('open',open);if(open)nav.querySelector('a')?.focus()});
   nav?.addEventListener('click',event=>{if(event.target instanceof Element && event.target.closest('a'))closeMenu()});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu?.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus()}});
   document.addEventListener('click',event=>{if(menu&&nav&&!nav.contains(event.target)&&!menu.contains(event.target))closeMenu()});
@@ -30,7 +30,7 @@
     dirty=d.dirty&&!d.submitted;receivedState=true;
     if(loading)loading.hidden=true;
   });
-  setTimeout(()=>{if(!receivedState&&loading)loading.textContent='If the form does not appear below, use “Open the secure project form” to continue.'},15000);
+  setTimeout(()=>{if(!receivedState&&loading)loading.textContent='If the form does not appear below, use “Open the form in a new tab” below, or call Josh at (864) 373-4464.'},15000);
   window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue=''}});
   document.addEventListener('click',event=>{
     const a=event.target instanceof Element ? event.target.closest('a') : null;
