@@ -30,7 +30,7 @@
     dirty=d.dirty&&!d.submitted;receivedState=true;
     if(loading)loading.hidden=true;
   });
-  setTimeout(()=>{if(!receivedState&&loading)loading.textContent='If the form does not appear below, use “Open the secure project form” to continue.'},15000);
+  setTimeout(()=>{if(!receivedState&&loading)loading.textContent='If the form does not appear below, use “Open the project form” to continue.'},15000);
   window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue=''}});
   document.addEventListener('click',event=>{
     const a=event.target instanceof Element ? event.target.closest('a') : null;
