@@ -40,3 +40,5 @@ html{scroll-padding-bottom:85px}
 @media(max-width:700px){.opening-bottom{grid-template-columns:1fr}.opening-bottom p{line-height:1.8}}
 .scope-pair article:last-child .eyebrow{color:#754020}
 html[data-theme=light] .faq-list summary>span{color:#87421c}
+
+#project-form-start:focus{outline:none}
