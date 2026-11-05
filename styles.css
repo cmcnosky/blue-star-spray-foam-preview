@@ -44,3 +44,47 @@ html{scroll-padding-bottom:85px}
 html[data-theme=light] .faq-list summary>span{color:#87421c}
 
 #project-form-start:focus{outline:none}
+
+/* Vibrant orange system: action surfaces stay bright; orange text on light
+   panels uses a deeper companion color for readable contrast. */
+:root{
+  --orange:#ff7a1a;
+  --orange-action:#ff7a1a;
+}
+html[data-theme=light]{
+  --orange:#a63b14;
+  --orange-action:#ff6f19;
+}
+.button.primary,
+.skip,
+.mobile-dock a:last-child{
+  background:var(--orange-action);
+  border-color:var(--orange-action);
+}
+.button.primary:hover{background:#ff8a3d}
+.brand-mark .ray-1,
+html[data-theme=light] .site-footer .brand-mark .ray-1{fill:#ff6d18}
+html[data-theme=light] .brand-mark .ray-1{fill:#d94a07}
+.surface-drawing [stroke="#ffad72"]{stroke:#ff7a1a}
+.surface-drawing [fill="#ffad72"]{fill:#ff7a1a}
+.project-paths .eyebrow,
+.surface-band .eyebrow,
+.scope-pair article:first-child .eyebrow,
+.scope-pair article:last-child .eyebrow,
+.service-note .eyebrow,
+.gallery-section .eyebrow{color:#8f330e}
+html[data-theme=light] .eyebrow,
+html[data-theme=light] .process-rows li>span,
+html[data-theme=light] .detail-grid article>span,
+html[data-theme=light] .opening-bottom>a>span,
+html[data-theme=light] .text-link:hover,
+html[data-theme=light] .faq-list summary>span{color:#a53a0e}
+.project-paths a:focus-visible,
+.surface-band a:focus-visible,
+.bid-band a:focus-visible,
+.service-note a:focus-visible{outline-color:#8f330e}
+.site-footer a:focus-visible,
+html[data-theme=light] .site-footer a:focus-visible{outline-color:#ff7a1a}
+html[data-theme=light] a:focus-visible,
+html[data-theme=light] button:focus-visible,
+html[data-theme=light] summary:focus-visible{outline-color:#a53a0e}
