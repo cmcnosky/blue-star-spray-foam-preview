@@ -64,7 +64,9 @@ privacy=intro('PRIVACY & PROJECT FILES','Know where<br><span>your information go
 page('Privacy and uploads','How the website and Blue Star project submission service handle your information.','privacy.html',privacy)
 page('Page not found','Find your way back to Blue Star Spray Foam.','404.html',intro('PAGE NOT FOUND','Let’s get you<br><span>back on track.</span>','The page may have moved. Start from the home page or send Josh your project.','404.html')+'<section class="wrap error-actions">'+button('Go to the home page',SITE_ROOT)+button('Start your project',SITE_ROOT+'project.html','outline')+'</section>')
 ROOT.joinpath('.nojekyll').touch()
-ROOT.joinpath('robots.txt').write_text('User-agent: *\nDisallow: /\n')
+# Let share-preview crawlers read public pages; page-level noindex keeps this preview out of search.
+# On GitHub project Pages, only the host-root robots.txt is authoritative.
+ROOT.joinpath('robots.txt').write_text('User-agent: *\nAllow: /\n')
 print('Generated 6 static pages.')
 
 # Previously shared concept links resolve to the current main version.
