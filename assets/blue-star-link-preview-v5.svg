@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>Blue Star Spray Foam Insulation — Insulation for the way you build.</title>
+  <desc>Blue Star Spray Foam Insulation branding beside a photograph of spray foam being installed, with Greer and the four-state service region identified.</desc>
+  <defs>
+    <clipPath id="photo-clip"><rect x="716" width="484" height="630"/></clipPath>
+    <linearGradient id="photo-shade" x1="0" x2="1">
+      <stop offset="0" stop-color="#193541" stop-opacity=".42"/>
+      <stop offset=".36" stop-color="#193541" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#102a36" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="lower-shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset=".4" stop-color="#102a36" stop-opacity="0"/>
+      <stop offset="1" stop-color="#102a36" stop-opacity=".88"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#193541"/>
+  <g clip-path="url(#photo-clip)">
+    <image href="application.jpg" x="716" y="0" width="484" height="630" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="716" width="484" height="630" fill="url(#photo-shade)"/>
+    <rect x="716" width="484" height="630" fill="url(#lower-shade)"/>
+  </g>
+  <rect x="708" width="8" height="630" fill="#FF7A1A"/>
+
+  <g transform="translate(48 43) scale(1.12)">
+    <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(0 32 33)" fill="#b1edff"/>
+    <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(72 32 33)" fill="#FF6D18"/>
+    <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(144 32 33)" fill="#66c8fa"/>
+    <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(216 32 33)" fill="#66c8fa"/>
+    <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(288 32 33)" fill="#66c8fa"/>
+    <circle cx="32" cy="33" r="7.5" fill="#193541" stroke="#c7e9ef" stroke-width="2"/>
+  </g>
+  <g font-family="Avenir Next, Segoe UI, DejaVu Sans, sans-serif" fill="#f1f4ee">
+    <text x="137" y="80" font-size="31" font-weight="800" letter-spacing="2.1">BLUE STAR</text>
+    <text x="138" y="108" font-size="14" font-weight="650" letter-spacing="2.45" fill="#c3d1d3">SPRAY FOAM INSULATION</text>
+  </g>
+
+  <g font-family="Avenir Next, Segoe UI, DejaVu Sans, sans-serif">
+    <text x="54" y="205" font-size="15" font-weight="800" letter-spacing="2.25" fill="#FF7A1A">RESIDENTIAL · COMMERCIAL</text>
+    <text x="52" y="294" font-size="65" font-weight="650" letter-spacing="-2.2" fill="#f1f4ee">Insulation for</text>
+    <text x="52" y="370" font-size="65" font-weight="650" letter-spacing="-2.4" fill="#bdd4ac">the way you build.</text>
+    <text x="55" y="433" font-size="21" font-weight="550" fill="#c3d1d3">Start with the building. Josh helps work out the insulation.</text>
+  </g>
+
+  <path d="M55 481H654" stroke="#4a6570" stroke-width="1.5"/>
+  <g font-family="Avenir Next, Segoe UI, DejaVu Sans, sans-serif">
+    <text x="55" y="523" font-size="15" font-weight="800" letter-spacing="2.15" fill="#FF7A1A">BASED IN GREER, SOUTH CAROLINA</text>
+    <text x="55" y="562" font-size="18" font-weight="650" letter-spacing=".6" fill="#f1f4ee">SC · NC · GA · TN</text>
+    <text x="55" y="591" font-size="13" font-weight="550" letter-spacing=".25" fill="#aecad1">Project coverage and availability confirmed individually.</text>
+  </g>
+
+  <g font-family="Avenir Next, Segoe UI, DejaVu Sans, sans-serif">
+    <rect x="755" y="46" width="202" height="38" rx="2" fill="#193541" fill-opacity=".92" stroke="#FF7A1A"/>
+    <text x="775" y="71" font-size="12" font-weight="800" letter-spacing="1.8" fill="#f1f4ee">THE WORK, UP CLOSE</text>
+    <path d="M758 528H1150" stroke="#FF7A1A" stroke-width="3"/>
+    <text x="758" y="559" font-size="13" font-weight="800" letter-spacing="1.25" fill="#f1f4ee">PLANS, PHOTOS OR A FEW WORDS</text>
+    <text x="758" y="588" font-size="14" font-weight="550" fill="#d7e2df">Start with whatever you already have.</text>
+  </g>
+
+  <path d="M681 33v44m-22-22h44" stroke="#aecad1" stroke-width="1" opacity=".65"/>
+  <circle cx="681" cy="55" r="4" fill="#FF7A1A"/>
+</svg>
